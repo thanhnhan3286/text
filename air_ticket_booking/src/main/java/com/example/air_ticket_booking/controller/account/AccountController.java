@@ -28,17 +28,5 @@ public class AccountController {
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
-    /**
-     * create by: SangTDN
-     * @param newPass
-     * @param oldPass
-     * @param idEmployee
-     * @return status
-     */
-    @PatchMapping("/change-pass-employee/{newPass}/{oldPass}/{idEmployee}")
-    public ResponseEntity<?> updatePasswordForEmployee (@PathVariable String newPass, @PathVariable String oldPass,
-                                                        @PathVariable Long idEmployee){
-        accountService.updatePasswordForEmployee(newPass,oldPass,idEmployee);
-        return new ResponseEntity<>(HttpStatus.OK);
-    }
+
 }
